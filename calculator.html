@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+        button{
+            border: none;
+            background-color: rgb(50,50,50);
+            height:50px;
+            width:50px;
+            color: white;
+            margin: 5px;
+
+            font-family: 'Gill Sans';
+            font-size: 30px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .box
+        { 
+            text-align: right;
+            margin:0px;
+            width:200px;
+            background-color: rgb(50,50,50);
+            font-size: 30px;
+            color: white;
+
+        }
+        .operator
+        {
+            background-color: orange;
+        }
+        .clear{
+            font-size: 15px;
+        }
+
+        h1{
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+        <h1>SIMPLE CALCULATOR</h1>
+        <p class="box"></p>
+        <br>
+
+        <button onclick="
+        s+='1';
+        display();
+        ">1</button>
+
+        <button onclick="
+        s+='2';
+        display();
+        ">2</button>
+
+        <button onclick="
+        s+='3';
+        display();
+        ">3</button>
+
+        <button onclick="
+        s+='+';
+        display();
+        "class="operator">+</button>
+
+        <br>
+        <button onclick="
+        s+='4';
+        display();
+        ">4</button>
+
+        <button onclick="
+        s+='5';
+        display();
+        ">5</button>
+
+        <button onclick="
+        s+='6';
+        display();
+        ">6</button>
+
+        <button onclick="
+        s+='-';
+        display();
+        " class="operator">-</button>
+
+        <br>
+        <button onclick="
+        s+='7';
+        display();
+        ">7</button>
+
+        <button onclick="
+        s+='8';
+        display();
+        ">8</button>
+
+        <button onclick="
+        s+='9';
+        display();
+        ">9</button>
+
+        <button onclick="
+        s+='*';
+        display();
+        " class="operator">*</button>
+
+        <br>
+        <button onclick="
+        s+='0';
+        display();
+        ">0</button>
+
+        <button onclick="
+        s+='.';
+        display();
+        ">.</button>
+
+        <button onclick="
+         s = eval(s);
+        document.querySelector('.box').innerHTML=s;
+        ">=</button>
+
+        <button onclick="
+        s+='/';
+        display();
+        " class="operator">/</button>
+
+        <br>
+        <button onclick =" s='';
+        display();
+        " class="clear">Clear</button>
+
+    <!--||-->
+
+        <script>
+            let s="";
+            function display(){
+                document.querySelector('.box').innerHTML=`${s}`;
+            }
+
+
+        </script>
+  </body>
+  </html>
